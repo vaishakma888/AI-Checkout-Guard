@@ -1,0 +1,337 @@
+/**
+ * checkout-styles.css
+ * Frontend styles for AI Checkout Guard checkout integration
+ */
+
+/* Risk notification messages */
+.ai-guard-risk-notice {
+    background: #e7f3ff;
+    border: 1px solid #0073aa;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.ai-guard-risk-notice.low {
+    background: #f0f9ff;
+    border-color: #0073aa;
+    color: #0c4a6e;
+}
+
+.ai-guard-risk-notice.medium {
+    background: #fffbeb;
+    border-color: #f59e0b;
+    color: #92400e;
+}
+
+.ai-guard-risk-notice.high {
+    background: #fef2f2;
+    border-color: #ef4444;
+    color: #b91c1c;
+}
+
+/* Prepaid incentive styling */
+.ai-guard-prepaid-incentive {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 12px 0;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+}
+
+.ai-guard-prepaid-incentive::before {
+    content: "💰";
+    font-size: 18px;
+}
+
+.ai-guard-prepaid-incentive .amount {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* Payment method modifications */
+.wc-block-components-radio-control__option.payment_method_cod {
+    position: relative;
+}
+
+.ai-guard-cod-warning {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #856404;
+}
+
+.ai-guard-cod-disabled {
+    opacity: 0.6;
+    pointer-events: none;
+    filter: grayscale(50%);
+}
+
+/* Verification modal */
+.ai-guard-verification-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+}
+
+.ai-guard-verification-content {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.ai-guard-verification-content h3 {
+    margin: 0 0 16px 0;
+    color: #1e293b;
+    font-size: 18px;
+}
+
+.ai-guard-verification-content p {
+    margin: 0 0 20px 0;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.ai-guard-verification-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.ai-guard-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.ai-guard-btn-primary {
+    background: #3b82f6;
+    color: white;
+}
+
+.ai-guard-btn-primary:hover {
+    background: #2563eb;
+}
+
+.ai-guard-btn-secondary {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.ai-guard-btn-secondary:hover {
+    background: #d1d5db;
+}
+
+/* WhatsApp verification specific */
+.ai-guard-whatsapp-verify {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: #f0fdf4;
+    border: 1px solid #22c55e;
+    border-radius: 6px;
+    margin: 12px 0;
+}
+
+.ai-guard-whatsapp-icon {
+    width: 24px;
+    height: 24px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.ai-guard-whatsapp-text {
+    flex: 1;
+    color: #166534;
+    font-size: 14px;
+}
+
+/* Loading states */
+.ai-guard-loading {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.ai-guard-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #e5e7eb;
+    border-top: 2px solid #3b82f6;
+    border-radius: 50%;
+    animation: ai-guard-spin 1s linear infinite;
+}
+
+@keyframes ai-guard-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Risk tier indicators */
+.ai-guard-tier-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.ai-guard-tier-badge.low {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.ai-guard-tier-badge.medium {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.ai-guard-tier-badge.high {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Checkout block specific overrides */
+.wc-block-checkout__payment-method .ai-guard-notice {
+    margin: 8px 0;
+    font-size: 13px;
+}
+
+.wc-block-components-radio-control__option-layout {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 768px) {
+    .ai-guard-verification-content {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .ai-guard-verification-buttons {
+        flex-direction: column;
+    }
+    
+    .ai-guard-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .ai-guard-prepaid-incentive {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+    
+    .ai-guard-prepaid-incentive .amount {
+        font-size: 15px;
+    }
+}
+
+/* Animation for dynamic content */
+.ai-guard-fade-in {
+    animation: ai-guard-fadeIn 0.3s ease-in;
+}
+
+@keyframes ai-guard-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hide elements when risk is being calculated */
+.ai-guard-calculating .wc-block-components-radio-control__option.payment_method_cod {
+    opacity: 0.7;
+}
+
+.ai-guard-calculating .wc-block-components-radio-control__option.payment_method_cod::after {
+    content: "Checking eligibility...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: #6b7280;
+}
+
+/* Success states */
+.ai-guard-success {
+    background: #f0fdf4;
+    border: 1px solid #22c55e;
+    color: #166534;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ai-guard-success::before {
+    content: "✓";
+    font-weight: bold;
+    color: #22c55e;
+}
+
+/* Error states */
+.ai-guard-error {
+    background: #fef2f2;
+    border: 1px solid #ef4444;
+    color: #b91c1c;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ai-guard-error::before {
+    content: "⚠";
+    font-weight: bold;
+    color: #ef4444;
+}

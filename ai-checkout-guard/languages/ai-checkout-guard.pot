@@ -1,0 +1,127 @@
+# ai-checkout-guard.pot
+# Translation template for AI Checkout Guard.
+# Copyright (C) 2025 Your Name
+# This file is distributed under the GPLv2 or later license.
+# FIRST AUTHOR <you@example.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: AI Checkout Guard 1.0.0\n"
+"Report-Msgid-Bugs-To: https://example.com/ai-checkout-guard\n"
+"POT-Creation-Date: 2025-09-07 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ai-checkout-guard.php: header
+msgid "AI Checkout Guard"
+msgstr ""
+
+#: ai-checkout-guard.php: header
+msgid "Prevent RTO by predicting risk and controlling COD at checkout"
+msgstr ""
+
+#: includes/class-main.php:load_plugin_textdomain
+msgid "AI Checkout Guard requires WooCommerce to be installed and active. Please install and activate WooCommerce."
+msgstr ""
+
+#: admin/class-admin-settings.php:section_general_cb
+msgid "Connect your risk service and basic performance settings."
+msgstr ""
+
+#: admin/class-admin-settings.php:section_policy_cb
+msgid "Define how COD behaves for different risk levels."
+msgstr ""
+
+#: admin/class-admin-settings.php:field_api_url_cb
+msgid "Risk API URL"
+msgstr ""
+
+#: admin/class-admin-settings.php:field_api_key_cb
+msgid "API Key (Bearer)"
+msgstr ""
+
+#: admin/class-admin-settings.php:field_timeout_cb
+msgid "HTTP Timeout (seconds)"
+msgstr ""
+
+#: admin/class-admin-settings.php:field_cache_ttl_cb
+msgid "API Cache TTL (seconds)"
+msgstr ""
+
+#: admin/class-admin-settings.php:field_low_threshold_cb
+msgid "Low Risk Threshold (0–100)"
+msgstr ""
+
+#: admin/class-admin-settings.php:field_high_threshold_cb
+msgid "High Risk Threshold (0–100)"
+msgstr ""
+
+#: admin/class-admin-settings.php:field_cod_action_cb
+msgid "COD Action for High Risk"
+msgstr ""
+
+#: public/class-checkout-filter.php:filter_gateways
+msgid "Tip: Prepay now to save ₹20 and ensure a smooth delivery."
+msgstr ""
+
+#: public/class-checkout-filter.php:filter_gateways
+msgid "Verification required for COD"
+msgstr ""
+
+#: partials/risk-message.php
+msgid "Risk Level: %s"
+msgstr ""
+
+#: partials/risk-message.php
+msgid "Score: %d"
+msgstr ""
+
+#: partials/risk-message.php
+msgid "Reason: %s"
+msgstr ""
+
+#: public/class-public.php:render_info_shortcode
+msgid "tier"
+msgstr ""
+
+#: public/class-public.php:render_info_shortcode
+msgid "score"
+msgstr ""
+
+#: public/class-public.php:render_info_shortcode
+msgid "reason"
+msgstr ""
+
+#: class-whatsapp-api.php
+msgid "WhatsApp API URL or token not configured."
+msgstr ""
+
+#: class-whatsapp-api.php
+msgid "WhatsApp API error %d: %s"
+msgstr ""
+
+#: class-otp-handler.php
+msgid "SMS API URL or key not configured."
+msgstr ""
+
+#: class-otp-handler.php
+msgid "Your verification code is: %s"
+msgstr ""
+
+#: class-webhooks.php:verify_signature
+msgid "Invalid payload"
+msgstr ""
+
+#: class-webhooks.php:verify_signature
+msgid "Order not found"
+msgstr ""
+
+#: class-webhooks.php:handle_webhook
+msgid "Order cancelled by AI risk service"
+msgstr ""

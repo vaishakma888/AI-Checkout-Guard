@@ -1,0 +1,68 @@
+/* admin-styles.css
+ * Styles for the AI Checkout Guard settings page and admin notices */
+
+.wrap h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #23282d;
+}
+
+.ai-guard-section-description {
+    margin-bottom: 15px;
+    font-style: italic;
+    color: #555;
+}
+
+.form-table th {
+    width: 200px;
+    vertical-align: top;
+    padding: 10px 0;
+}
+
+.form-table td {
+    padding: 10px 0;
+}
+
+input.regular-text.code,
+input.regular-text {
+    width: 100%;
+    max-width: 400px;
+}
+
+.notice-error.ai-checkout-guard-notice,
+.notice-success.ai-checkout-guard-notice {
+    border-left-color: #0073aa;
+}
+
+.submit .button-primary {
+    background: #0073aa;
+    border-color: #006799;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.submit .button-primary:hover {
+    background: #006799;
+    border-color: #005f8d;
+}
+
+.select2-container--default .select2-selection--single {
+    height: 32px;
+    line-height: 32px;
+}
+
+select {
+    min-width: 200px;
+    max-width: 300px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 782px) {
+    .wrap h1 {
+        font-size: 20px;
+    }
+    input.regular-text.code,
+    input.regular-text {
+        max-width: 100%;
+    }
+}
